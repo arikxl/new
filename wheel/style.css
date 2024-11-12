@@ -1,0 +1,93 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: black;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:white;
+}
+
+.wheel{
+    width: 500px;
+    height: 500px;
+    background-color: #ccc;
+    border-radius: 50%;
+    border: 15px solid white;
+    position: relative;
+}
+
+.wheel div{
+    height: 50%;
+    width: 200px;
+    position: absolute;
+    clip-path: polygon(100% 0, 50% 100%, 0 0);
+    transform: translateX(-50%);
+    transform-origin: bottom;
+    text-align: center;
+    left: 135px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+}
+
+.wheel .one{
+    background-color: red;
+    left: 50%;
+}
+
+.wheel .two{
+    background-color: aquamarine;
+    transform: rotate(45deg);
+}
+
+.wheel .three{
+    background-color: blueviolet;
+    transform: rotate(90deg);
+}
+
+.wheel .four{
+    background-color: yellowgreen;
+    transform: rotate(135deg);
+}
+
+.wheel .five{
+    background-color: tomato;
+    transform: rotate(180deg);
+}
+
+.wheel .six {
+    background-color: steelblue;
+    transform: rotate(225deg);
+}
+
+.wheel .seven{
+    background-color:darkcyan;
+    transform: rotate(270deg);
+}
+
+.wheel .eight{
+    background-color: cornflowerblue;
+    transform: rotate(315deg);
+}
+
+.arrow{
+    position: absolute;
+    top: 30px;
+    /* left: 50%; */
+    transform: translateX(25%);
+    z-index: 20;
+    font-size: 50px;
+}
+
+button{
+    position: absolute;
+    top: 50%;
+    z-index: 20;
+}

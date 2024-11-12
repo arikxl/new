@@ -1,0 +1,83 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+header{
+    height: 10vh;
+    background-color: aquamarine;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+header * {
+  /* Styles for all elements inside the header */
+    flex:1;
+    /* background-color: blueviolet; */
+}
+
+h1{
+    text-align: center;
+}
+
+#lifeSpan{
+    text-align: right;
+}
+
+main{
+    height: 85vh;
+    position: relative;
+}
+
+footer{
+    height: 5vh;
+    background-color: violet;
+    z-index: 10;
+    position: relative;
+}
+
+#fruit{
+    width: 80px;
+    height: 80px;
+    /* background-color: black; */
+    position: absolute;
+    left: 46%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 70px;
+    /* animation: rotate 2s linear infinite; */
+}
+
+#bowl{
+    width: 120px;
+    height: 30px;
+    /* background-color: chocolate; */
+    position: absolute;
+    bottom: 5px;
+    left: 45%;
+        display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 29px;
+
+}
+
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
