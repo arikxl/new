@@ -1,0 +1,143 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    color: white;
+}
+
+
+/* green #22c55e */
+/* gray #555 */
+/* white #fff */
+
+
+body{
+    background-color: black;
+
+}
+
+.notes-app{
+    padding: 30px;
+}
+
+form{
+    display: none;
+}
+
+.notes{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 3rem;
+}
+
+/* #notesList{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    background: red;
+} */
+
+.new-note{
+    width: 20%;
+    aspect-ratio: 1/1;
+    border: 3px dashed white;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 10px;
+    cursor: pointer;
+}
+
+figure{
+    width: 20%;
+    aspect-ratio: 1/1;
+    border: 2px solid white;
+    background-color: #1c1917;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+
+.title, .note-text{
+    width: 100%;
+    background-color: #555;
+    border-radius: 10px;
+    letter-spacing: 1px;
+    padding: 15px 10px;
+    outline: black solid 1px;
+    transition: outline 0.3s;
+    position: relative;
+    overflow-y: auto;
+    clip-path: inset(0 round 10px);
+}
+
+.title::-webkit-scrollbar,
+.note-text::-webkit-scrollbar{
+    width: 4px;
+    background-color: #888;
+    border-radius: 25px;
+}
+
+.title::-webkit-scrollbar-thumb,
+.note-text::-webkit-scrollbar-thumb{
+    background-color: #22c55e;
+    border-radius: 5px;
+}
+
+.title:focus, .note-text:focus{
+    outline: 1px solid #22c55e;
+}
+.title::before, .note-text::before{
+    content: "Edit mode";
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 10px;
+    border-radius: 0 0 0 4px;
+    padding: 3px 5px;
+    background-color: #22c55e;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s;
+}
+.title:focus::before, .note-text:focus::before{
+  visibility: visible;
+    opacity: 1;
+}
+
+
+.title{
+    height: 30%;
+    font-size: 25px;
+    text-align: center;
+    font-weight: 300;
+}
+ .note-text{
+    height: 50%;
+    font-size: 20px;
+ }
+
+.settings{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.date{
+    font-size: 16px;
+}
+
+.settings span{
+    font-size: 20px;
+    cursor: pointer;
+}
