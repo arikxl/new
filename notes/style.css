@@ -95,6 +95,7 @@ figure{
 
 .title:focus, .note-text:focus{
     outline: 1px solid #22c55e;
+    outline: 1px solid #22c55e;
 }
 .title::before, .note-text::before{
     content: "Edit mode";
