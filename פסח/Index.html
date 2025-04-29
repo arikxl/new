@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="he">
+
+<head>
+    <meta charset="UTF-8">
+    <title>אחד מי יודע - גרסה פשוטה</title>
+</head>
+
+<body style="direction: rtl; font-family: Arial; padding: 20px;">
+
+    <h2>אחד מי יודע?</h2>
+    <label>בחר מספר בין 1 ל-13:</label>
+    <input type="number" id="numberInput" min="1" max="13">
+    <button onclick="showSong()">הצג</button>
+
+    <pre id="result"></pre>
+
+    <script>
+        const songParts = [
+            "אחד אלוהינו שבשמיים ובארץ",
+            "שני לוחות הברית",
+            "שלושה אבות",
+            "ארבע אימהות",
+            "חמישה חומשי תורה",
+            "שישה סדרי משנה",
+            "שבעה ימי שבת",
+            "שמונה ימי מילה",
+            "תשעה חדשי לידה",
+            "עשרה דיברות",
+            "אחד עשר כוכבים",
+            "שנים עשר שבטים",
+            "שלושה עשר מידות של רחמים"
+        ];
+
+        function showSong() {
+            const input = document.getElementById("numberInput").value;
+            const num = parseInt(input);
+            const result = document.getElementById("result");
+
+            if (isNaN(num) || num < 1 || num > 13) {
+                result.textContent = "נא להזין מספר בין 1 ל-13.";
+                return;
+            }
+
+            let song = `\n${num} מי יודע?\n${num} אני יודע,\n`;
+
+            // נבנה את השיר הפוך מהמספר הנבחר כלפי אחד
+            let parts = [];
+            for (let i = num - 1; i >= 0; i--) {
+                parts.push(songParts[i]);
+            }
+
+            song += parts.join('\n');
+            result.textContent = song;
+        }
+    </script>
+
+</body>
+
+</html>

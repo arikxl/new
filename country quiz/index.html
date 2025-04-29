@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="game">
+        <div class="flex">
+            <h2>Score: <span id="scoreSpan">0</span></h2>
+            <button id="newGameBtn" onclick="getRandomCountry()">New Game</button>
+        </div>
+        <div>
+            <input id="inpt" type="text" placeholder="Guess the Country">
+            <button onclick="guessCountry()">GO!</button>
+        </div>
+        <h2 id="msgH2"></h2>
+        <img id="img">
+        <div id="info">
+            <div class="flex">
+                <h1 id="nameH1"></h1>
+                <img id="symbolImg">
+            </div>
+
+            <p>Capital: <span id="capitalP"></span></p>
+            <p>Continent: <span id="continentP"></span></p>
+            <p>Population: <span id="populationP"></span></p>
+            <p>Money: <span id="moneySymbol"></span> <span id="moneyP"></span></p>
+            <p>Languages: <span id="languages"></span></p>
+        </div>
+    </div>
+
+    <div class="game game2">
+        <div>
+            <button onclick="clue1()">Clue -1</button>
+            <button onclick="clue2()">Clue -2</button>
+            <button onclick="clue3()">Clue -3</button>
+        </div>
+        <p id="clue1P"></p>
+        <p id="clue2P"></p>
+        <p id="clue3P"></p>
+        <p id="clue3P1"></p>
+        <p id="clue3P2"></p>
+    </div>
+
+
+    <script type="text/javascript" src="main.js"></script>
+</body>
+
+</html>
